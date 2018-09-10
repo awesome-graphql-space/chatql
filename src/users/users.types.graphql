@@ -1,0 +1,51 @@
+# import * from '../conversations/conversations.types.graphql'
+# import * from '../messages/messages.types.graphql'
+# import * from '../shared.graphql'
+
+type User implements Node {
+
+  # Generated id for a user. read-only
+  _id: ID!
+  #  A unique identifier for the object.
+  _key: ID!
+  #  A unique identifier for the object.
+  _rev: ID!
+
+  # Date and time the object was created
+  createdAt: DateTime!
+  # Date and time the object was created
+  updatedAt: DateTime!
+
+  #  The username
+  username: String!
+
+  #  For email verification
+  email: String
+
+  #  For mobile verification
+  mobile: String
+
+  #  A user's enrolled Conversations. This is an interesting case. This is an interesting pagination case.
+  conversations(after: String, first: Int): UserConverstationsConnection
+
+  #  Get a users messages by querying on the Messages table.
+  messages(after: String, first: Int): MessageConnection
+
+  # check if user is verified
+	isVerfied: Boolean!
+  shortVerCode: String!
+  longVerCode: String!
+}
+
+type UserConversations {
+  associated: [UserConversations]
+  conversation: Conversation
+  conversationId: ID!
+  user: User
+  userId: ID!
+}
+
+type UserConverstationsConnection {
+  nextToken: String
+  userConversations: [UserConversations]
+}

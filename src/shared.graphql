@@ -1,0 +1,13 @@
+interface Node {
+  #  Generated id for a user. read-only
+  _id: ID!
+  #  A unique identifier for the object.
+  _key: ID!
+  #  A unique identifier for the object.
+  _rev: ID!
+
+  # Date and time the object was created
+  createdAt: DateTime!
+  # Date and time the object was created
+  updatedAt: DateTime!
+}

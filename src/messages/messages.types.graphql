@@ -1,0 +1,35 @@
+# import * from '../conversations/conversations.types.graphql'
+# import * from '../shared.graphql'
+
+type Message {
+  # Generated id for a user. read-only
+  _id: ID!
+  #  A unique identifier for the object.
+  _key: ID!
+  #  A unique identifier for the object.
+  _rev: ID!
+
+  # Date and time the object was created
+  createdAt: DateTime!
+  # Date and time the object was created
+  updatedAt: DateTime!
+
+  #  The author object. Note: `authorId` is only available because we list it in `extraAttributes` in `Conversation.messages`
+  author: User
+  #  The message content.
+  content: String!
+  #  The id of the Conversation this message belongs to. This is the table primary key.
+  conversationId: ID!
+  #  The message timestamp. This is also the table sort key.
+  createdAt: String
+
+  #  Flag denoting if this message has been accepted by the server or not.
+  isSent: Boolean
+  recipient: User
+  sender: String
+}
+
+type MessageConnection {
+  messages: [Message]
+  nextToken: String
+}
