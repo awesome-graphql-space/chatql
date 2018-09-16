@@ -1,4 +1,7 @@
-# import * from '/ 
+# import * from './users/users.types.graphql'
+# import * from './messages/messages.types.graphql'
+# import * from './conversations/conversations.types.graphql'
+# import * from './shared.graphql'
 
 type Mutation {
   #  Create a Conversation. Use some of the cooked in template functions for UUID and DateTime.

@@ -1,8 +1,8 @@
-# import * from '../conversations/conversations.types.graphql'
-# import * from '../messages/messages.types.graphql'
+# import Conversation from '../conversations/conversations.types.graphql'
+# import MessageConnection from '../messages/messages.types.graphql'
 # import * from '../shared.graphql'
 
-type User implements Node {
+type User {
 
   # Generated id for a user. read-only
   _id: ID!

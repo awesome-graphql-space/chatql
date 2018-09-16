@@ -1,3 +1,6 @@
+scalar JSON
+scalar DateTime
+
 interface Node {
   #  Generated id for a user. read-only
   _id: ID!

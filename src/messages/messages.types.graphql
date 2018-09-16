@@ -1,5 +1,4 @@
-# import * from '../conversations/conversations.types.graphql'
-# import * from '../shared.graphql'
+# import DateTime from '../shared.graphql'
 
 type Message {
   # Generated id for a user. read-only
