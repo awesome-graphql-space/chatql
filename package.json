@@ -39,7 +39,7 @@
     "graphql-type-json": "^0.2.1",
     "hbs": "^4.0.1",
     "helmet": "^3.13.0",
-    "joi": "^13.6.0",
+    "joi": "^17.0.0",
     "mqtt": "^2.18.8",
     "passport": "^0.4.0",
     "passport-http-bearer": "^1.0.1",
